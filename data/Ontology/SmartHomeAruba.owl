@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/win10/ontologies/2021/0/untitled-ontology-15#"
+     xml:base="http://www.semanticweb.org/win10/ontologies/2021/0/untitled-ontology-15"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SmartHomeAruba="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#"
+     xmlns:untitled-ontology-15="http://www.semanticweb.org/win10/ontologies/2021/0/untitled-ontology-15#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Affecte -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Affecte">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AffectePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AffectePar"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AffectePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AffectePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AppartientA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#AppartientA">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Possede"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Heberge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Heberge">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#estDans"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Possede -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Possede">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#estDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#estDans">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#degre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#degre">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Temperature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#etat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#etat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#nom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Allume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Allume">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bathroom_big -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bathroom_big">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom_big -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom_big">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Climatiseur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Climatiseur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Closet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Closet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Declanche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Declanche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Dining -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Dining">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Door -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Door">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Eteint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Eteint">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ferme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ferme">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Gaziniere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Gaziniere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Lampe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Lampe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Lit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Lit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Living -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Living">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Office">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ouvre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ouvre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Periode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Periode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Porte -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Porte">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Preference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Preference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#TV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#TV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Temperature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Temperature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Capteur"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SmartHome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Volet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Volet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#autre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#autre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Cuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Cuisine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Kitchen"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M016"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T003"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Douche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Douche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bathroom"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M031"/>
+        <SmartHomeAruba:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Douche</SmartHomeAruba:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M014 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M014">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M031 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M031">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Mouvement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SalleAManger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#SalleAManger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Dining"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M014"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T003 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T003">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Toufik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Toufik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur"/>
+        <SmartHomeAruba:Possede rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#chambreToufik"/>
+        <SmartHomeAruba:nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toufik</SmartHomeAruba:nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#chambreToufik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#chambreToufik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Bedroom"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#M001"/>
+        <SmartHomeAruba:Heberge rdf:resource="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#T001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Action"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Objet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Periode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Piece"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Preference"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Utilisateur"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Allume"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Declanche"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Eteint"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ferme"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#Ouvre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#autre"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

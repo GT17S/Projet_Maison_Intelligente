@@ -1,0 +1,99 @@
+@prefix ns: <http://www.semanticweb.org/win10/ontologies/2022/0/SmartHomeAruba#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+
+[Ouvrir_Volet:(?capteur rdf:type ns:Temperature)
+ 			(?capteur ns:estDans ?piece) (?capteur ns:date ?date) 
+ 			(?volet rdf:type ns:Volet)
+			(?volet ns:estDans ?piece) (?capteur ns:degre ?value)
+ 			greaterThan(?value, "19.5"^^xsd:double) lessThan(?value, "27"^^xsd:double)	
+ 			
+  -> (?volet  ns:etat "Ouvert"^^xsd:string) (?volet ns:date ?date) 
+ 	]
+
+
+
+ [Eteindre_tv_et_lampe: (?capteur_mv rdf:type ns:Mouvement) (?capteur_mv  ns:estDans ?living) 
+ 
+ 			(?capteur_mv ns:etat "OFF")
+ 
+ 			(?lampe rdf:type ns:Lampe) (?lampe  ns:estDans ?living)
+ 			
+ 			 (?tv rdf:type ns:TV) (?tv  ns:estDans ?living)
+ 			
+  -> 	(?tv ns:etat "eteinte"^^xsd:string) 	(?lampe  ns:etat "eteinte"^^xsd:string)
+  
+  		(?capteur_mv ns:etat "OFF"^^xsd:string)
+  
+ 	]
+
+
+ 
+ 	
+[Fermer_Volet:  	(?capteur rdf:type ns:Temperature)
+ 			(?capteur ns:estDans ?bedroom) (?capteur ns:date ?date) 
+ 			(?volet rdf:type ns:Volet)
+			(?volet ns:estDans ?bedroom) (?capteur ns:degre ?value)
+ 			lessThan(?value, "20"^^xsd:double)	
+ 			
+  -> (?volet  ns:etat "fermee"^^xsd:string) (?volet ns:date ?date) 
+ 	]
+ 	
+
+
+
+
+[Ouvrir_Porte_et_volet:  	(?alarme rdf:type ns:Alarme) (?alarme ns:etat "on")
+ 
+ 			(?door rdf:type ns:Door) (?door ns:etat "fermÃ©e")
+
+	(?volet rdf:type ns:Volet) (?volet ns:etat "fermÃ©")
+ 			
+  -> 	(?door ns:etat "ouverte"^^xsd:string) 	(?volet  ns:etat "ouvert"^^xsd:string)
+  ]
+
+
+
+
+[Allume_Climatiseur:(?capteur rdf:type ns:Temperature)
+ 			(?capteur ns:estDans ?piece) (?capteur ns:date ?date) 
+ 			
+			(?Climatiseur rdf:type ns:Climatiseur)
+			(?Climatiseur ns:estDans ?piece)
+			(?capteur ns:degre ?value)
+ 			greaterThan(?value, "27"^^xsd:double)
+ 			
+  -> (?Climatiseur  ns:etat "Allume"^^xsd:string) (?volet ns:date ?date) 
+ 	]
+
+
+[Eteindre_Climatiseur:(?capteur rdf:type ns:Temperature)
+ 			(?capteur ns:estDans ?piece) (?capteur ns:date ?date) 
+ 			
+			(?Climatiseur rdf:type ns:Climatiseur)
+			(?Climatiseur ns:estDans ?piece)
+			(?capteur ns:degre ?value)
+ 			lessThan(?value, "27.5"^^xsd:double)
+ 			
+  -> (?Climatiseur  ns:etat "Eteint"^^xsd:string) (?volet ns:date ?date) 
+ 	]
+
+
+[Fermer_Gaziniere_et_ouvrir_porte: (?capteur rdf:type ns:Temperature)
+	  	(?capteur2_mv rdf:type ns:Mouvement)
+ 			(?capteur ns:estDans ?piece) (?capteur ns:date ?date) 
+			(?capteur2 ns:estDans ?piece) (?capteur2 ns:date ?date) 
+			(?capteur2 ns:etat "OFF")
+ 
+	(?gaziniere rdf:type ns:Gaziniere) (?gaziniere ns:etat "on")
+ 
+ 	(?door rdf:type ns:Door) (?door ns:etat "ferme")
+
+	(?gaziniere ns:estDans ?piece) (?door ns:estDans ?piece)
+	(?capteur ns:degre ?value)
+ 	greaterThan(?value, "40"^^xsd:double)
+
+  -> 	(?door ns:etat "ouverte"^^xsd:string) 	(?gaziniere  ns:etat "off"^^xsd:string)
+]
+
+
